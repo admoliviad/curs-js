@@ -1,4 +1,4 @@
-var person = {
+   var person = {
   firstName: 'Dragos',
   lastName: 'Iordache',
   birthYear: 1987,
