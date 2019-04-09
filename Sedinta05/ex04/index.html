@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Rectangles</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var calculateRectangleArea = (L, l) => {
+            return L * l;
+        };
+
+
+        var pereti = 2 * calculateRectangleArea(6, 2.5) + 2 * calculateRectangleArea(4, 2.5);
+        var ferestre = calculateRectangleArea(2, 1.5);
+        var usa = calculateRectangleArea(2.2, 1.5);
+        console.log(pereti - (ferestre + usa));
+
+
+
+
+        calculateRectangleArea(L, l) {
+            return L * l;
+        }
+
+        calculateSquareArea(l) {
+            return calculateRectangleArea(l, l);
+        }
+
+
+
+
+        var laturaPatrat = 4;
+        function calculateSquareArea() {
+            function calculateRectangleArea(laturaPatrat) {
+                calculateRectangleArea(4, 4);
+                return laturaPatrat;
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
