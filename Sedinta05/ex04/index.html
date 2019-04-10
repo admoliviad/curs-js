@@ -24,24 +24,30 @@
 
 
 
-        calculateRectangleArea(L, l) {
-            return L * l;
-        }
+       // calculateRectangleArea(L, l){
+     //       return L * l;
+     //   }
 
-        calculateSquareArea(l) {
-            return calculateRectangleArea(l, l);
-        }
-
-
+      //  calculateSquareArea(l) {
+     //       return calculateRectangleArea(l, l);
+      //  }
 
 
-        var laturaPatrat = 4;
-        function calculateSquareArea() {
-            function calculateRectangleArea(laturaPatrat) {
-                calculateRectangleArea(4, 4);
-                return laturaPatrat;
+
+
+
+        function calculateSquareArea(laturaPatrat) {
+
+            function calculateRectangleArea() {
+              
+                return laturaPatrat * laturaPatrat;
             }
+
+            console.log(calculateRectangleArea(laturaPatrat));
         }
+
+        calculateSquareArea(4);
+
 
 
 
