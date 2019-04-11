@@ -23,30 +23,27 @@
 
 
 
+        console.log('------------ Wrapper -------------');
 
-       // calculateRectangleArea(L, l){
-     //       return L * l;
-     //   }
-
-      //  calculateSquareArea(l) {
-     //       return calculateRectangleArea(l, l);
-      //  }
+       function calculateSquareArea(l) {
+           return calculateRectangleArea(l, l);
+       }
 
 
+       console.log(`Latura unui patrat de 3 pe 3 este ${calculateSquareArea(3)}`);
 
 
-
-        function calculateSquareArea(laturaPatrat) {
-
-            function calculateRectangleArea() {
-              
-                return laturaPatrat * laturaPatrat;
-            }
-
-            console.log(calculateRectangleArea(laturaPatrat));
-        }
-
-        calculateSquareArea(4);
+        // function calculateSquareArea(laturaPatrat) {
+        //
+        //     function calculateRectangleArea() {
+        //
+        //         return laturaPatrat * laturaPatrat;
+        //     }
+        //
+        //     console.log(calculateRectangleArea(laturaPatrat));
+        // }
+        //
+        // calculateSquareArea(4);
 
 
 
