@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>IIFE</title>
 </head>
+
 <body>
 
+    <script>
+
+        (function (window) {
+            console.log('Am rulat si am plecat, insa semnul mi-am lasat');
+            window.myName = 'Dragos';
+        })(window);
+
+        console.log(myName);
+
+    </script>
+
 </body>
+
 </html>

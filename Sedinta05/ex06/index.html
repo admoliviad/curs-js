@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Object Methods</title>
 </head>
+
 <body>
 
+
+    <script>
+
+        var person = {
+            getName: function () {
+                return 'DRagos Iordache';
+
+            },
+            getAge: function () {
+                return 32;
+            }
+        }
+
+        function accessor(methodSuffix) {
+            var methodName = 'get' + methodSuffix;
+            return person[methodName]();
+        }
+
+        console.log(accessor('Name'));
+
+       console.log(person.getName());
+       console.log(person.getAge());
+
+
+       console.log(accessor('Age'));
+
+       console.log('ma numesc ' + accessor('Name') + ' si am ' + accessor('Age') + ' ani');
+
+    </script>
+
 </body>
+
 </html>

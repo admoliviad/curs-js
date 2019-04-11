@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Anonymous Functions</title>
 </head>
+
 <body>
 
+    <button id="clicker">Buton</button>
+    <br>
+
+    <button id="removeClicker">Elimina Evenimentul</button>
+
+    <script>
+
+        var button = document.getElementById('clicker');
+
+        // button.addEventListener('click', function () {
+        //     alert('Ai apasat butonul!');
+        // })
+
+        function clickHandler() {
+            alert('Ai apasat butonul!');
+        }
+
+        button.addEventListener('click', clickHandler);
+
+
+        //ex 2
+
+
+        var removebutton = document.getElementById('removeClicker');
+
+        removebutton.addEventListener('click', function () {
+            button.removeEventListener('click', clickHandler);
+        });
+
+       
+
+       
+
+
+
+
+    </script>
+
 </body>
+
 </html>
