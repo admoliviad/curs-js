@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script>
+
+
+
+        //Exercitiul 1
+
+
+
+        function calculateSurface(L, l, h) {
+
+            // if (arguments.length === 1) {
+            //     return (Math.pow(L, 2));
+            // }
+            // if (arguments.length === 2) {
+            //     return L * l;
+            // }
+            // if (arguments.length === 3) {
+            //     return 2 * (l * l + L * h + l * h);
+            // }
+
+            switch (arguments.length) {
+                case 1:
+                    return (Math.pow(L, 2));
+                    break;
+                case 2:
+                    return L * l;
+                    break;
+                case 3:
+                    return 2 * (l * l + L * h + l * h);
+                    break;
+                default:
+                    console.log('matematica');
+
+            }
+
+        }
+
+        //  console.log(calculateSurface(4, 5));
+
+        //  console.log(calculateSurface(7));
+
+        //  console.log(calculateSurface(3, 8, 9));
+
+        console.log(calculateSurface(3, 8, 9, 5));
+
+
+
+
+
+        //Exercitiul 3
+
+
+        var pet = {
+            getName: function () {
+                return 'Pisi Pis';
+            },
+            getAge: function () {
+                return 5;
+            },
+            getSpecies: function () {
+                return 'pisica';
+            }
+        };
+
+        function accessor(methodSuffix) {
+            var methodName = 'get' + methodSuffix;
+            return pet[methodName]();
+        }
+
+        console.log(accessor('Name') + ' este ' + accessor('Species') + ' si are ' + accessor('Age') + ' ani.');
+
+        console.log('Animalul meu are ' + accessor('Age') + ' ani.');
+
+
+    </script>
+</body>
+
+</html>
