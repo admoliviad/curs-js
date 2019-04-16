@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Objects</title>
+</head>
+
+<body>
+
+    <script>
+
+
+
+        var car = {
+            make: 'Audi',
+            color: 'black',
+            wheels: 4,
+            speed: 50,
+            accelerate: function () {
+                this.speed++;
+            },
+            decelerate: function () {
+                this.speed--;
+            },
+            stop: function () {
+                this.speed = 0;
+            },
+            topSpeed: function () {
+                this.speed = 160;
+            },
+            topReverseSpeed: function () {
+                this.speed = -50;
+            },
+            setSpeed: function (speed) {
+                if(speed >= this.topSpeed) {
+                    this.speed = this.topSpeed;
+                } else if(speed <= this.topReverseSpeed) {
+                    this.speed = this.topReverseSpeed;
+                } else {
+                    this.speed = speed;
+                }
+            },
+        };
+
+
+        // ex01 1
+
+        console.log('Masina era marca ' + car.make + ' si se deplasa cu ' + car.speed + ' km/h.');
+
+
+
+
+
+        // ex01 2
+
+        for (i = 0; i <= 4; i++) {
+            //    console.log(i);
+            car.decelerate();
+            // console.log(car.speed);
+
+        }
+
+        console.log('Viteza noua este de ' + car.speed);
+
+
+        // ex01 3
+
+
+
+            car.stop();
+
+
+        console.log('Viteza noua este de ' + car.speed);
+
+
+     // ex01 4
+
+        car.topSpeed();
+        console.log('Viteza noua este de ' + car.speed);
+
+
+
+
+             // ex01 5
+
+             car.topReverseSpeed();
+        console.log('Viteza noua este de ' + car.speed);
+
+
+
+    </script>
+
+</body>
+
+</html>
