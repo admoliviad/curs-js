@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>User Agent</title>
 </head>
+
 <body>
 
+    <script>
+
+        var paragraphElement = document.createElement('p'),
+            userAgentString = navigator.userAgent,
+            message = 'Nu stim ce browser folosesti';
+
+        if (userAgentString.indexOf('Chrome') >= 0) {
+            message = 'Navighezi folosing Chrome';
+        }
+        // else {
+        //    userAgentString.indexOf('Firefox') >= 0 {
+        //    message = 'Navighezi folosing Firefox';
+        //     }
+        //  }
+
+
+        if (userAgentString.indexOf('Firefox') >= 0) {
+            message = 'Navighezi folosing Firefox';
+        }
+
+
+        paragraphElement.innerText = message;
+
+        document.body.appendChild(paragraphElement);
+
+
+
+        setTimeout(function () {
+            paragraphElement.remove();
+        }, 5000);
+
+    </script>
+
 </body>
+
 </html>

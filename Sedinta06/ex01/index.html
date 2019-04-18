@@ -17,6 +17,8 @@
             color: 'black',
             wheels: 4,
             speed: 50,
+            isTrunkOpen: false,
+            areLightsOn: false,
             accelerate: function () {
                 this.speed++;
             },
@@ -32,10 +34,34 @@
             topReverseSpeed: function () {
                 this.speed = -50;
             },
+            openTrunk: function () {
+                this.isTrunkOpen = true;
+            },
+            closeTrunk: function () {
+                this.isTrunkOpen = false;
+            },
+            lightsOn: function () {
+                this.areLightsOn = true;
+            },
+            lightsOff: function () {
+                this.areLightsOn = false;
+            },
+            flashlights: function () {
+                var self = this;
+                self.lightsOn();
+                window.setTimeout(function () {
+                    self.lightsOff();
+                }, 3000);
+            },
+
+            toggleLights: function() {
+                thisareLightsOn = !this.areLightsOn;
+            }
+
             setSpeed: function (speed) {
-                if(speed >= this.topSpeed) {
+                if (speed >= this.topSpeed) {
                     this.speed = this.topSpeed;
-                } else if(speed <= this.topReverseSpeed) {
+                } else if (speed <= this.topReverseSpeed) {
                     this.speed = this.topReverseSpeed;
                 } else {
                     this.speed = speed;
@@ -68,13 +94,13 @@
 
 
 
-            car.stop();
+        car.stop();
 
 
         console.log('Viteza noua este de ' + car.speed);
 
 
-     // ex01 4
+        // ex01 4
 
         car.topSpeed();
         console.log('Viteza noua este de ' + car.speed);
@@ -82,9 +108,9 @@
 
 
 
-             // ex01 5
+        // ex01 5
 
-             car.topReverseSpeed();
+        car.topReverseSpeed();
         console.log('Viteza noua este de ' + car.speed);
 
 
